@@ -1,0 +1,7 @@
+{
+  "name": "dronsito",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
