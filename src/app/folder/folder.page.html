@@ -15,7 +15,49 @@
   </ion-header>
 
   <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-toggle id="button3"
+      [enableOnOffLabels]="true"
+      size="large"
+      color="tertiary"></ion-toggle>
+  </div>
+  <div>
+    <div class="container">
+      <ion-label>{{ lastEmittedValue }}m</ion-label>
+    </div>
+    <div class="container">
+      <ion-range
+      [value]="0"
+      [min]="0"
+      [max]="4"
+      [pin]="true"
+      (ionChange)="onIonChange($event)"></ion-range>
+    </div>
+    <div class="container">
+      <ion-button id="button1"
+        fill="solid"
+        size="large"
+        color="secondary">
+        <ion-icon name="arrow-up-outline"></ion-icon>
+      </ion-button>
+    </div>
+    <div class="container">
+      <ion-button id="button2"
+      fill="solid"
+      size="large"
+      color="tertiary">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+      <ion-button id="button4"
+      fill="solid"
+      size="large"
+      color="tertiary">
+      <ion-icon name="arrow-forward-outline"></ion-icon></ion-button>
+    </div>
+      <div class="container">
+      <ion-button id="button5"
+      fill="solid"
+      size="large"
+      color="secondary"><ion-icon name="arrow-down-outline"></ion-icon></ion-button>
+    </div>
   </div>
 </ion-content>
